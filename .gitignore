@@ -5,3 +5,5 @@ test.py
 /camera/__pycache__
 /vision/__pycache__
 /backend/__pycache__
+/gestures/__pycache__
+/tests 

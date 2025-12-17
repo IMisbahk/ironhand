@@ -14,8 +14,8 @@ class Camera:
         else:
             raise ValueError("ur camera source isnt supported")
 
-    def read(self):
+    def Read(self):
         return self.Backend.read()
 
-    def release(self):
+    def Release(self):
         self.Backend.release()
