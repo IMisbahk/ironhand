@@ -4,6 +4,7 @@ test.py
 
 /camera/__pycache__
 /vision/__pycache__
-/backend/__pycache__
+/camera/backends/__pycache__
 /gestures/__pycache__
 /tests 
+/cursor/__pycache__
