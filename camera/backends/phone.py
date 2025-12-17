@@ -18,6 +18,7 @@ class PhoneBackend:
         Success, Frame = self.Capture.read()
         if not Success:
             return None
+        Frame = cv2.flip(Frame, 1)
         return Frame
 
     def release(self):
