@@ -1,3 +1,7 @@
 /__pycache__
 test.py
 /.venv
+
+/camera/__pycache__
+/vision/__pycache__
+/backend/__pycache__
