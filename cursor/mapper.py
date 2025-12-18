@@ -10,7 +10,12 @@ class CursorMapper:
         
         # landmark: dict with x, y in normalized space (0–1)
         
-        x = int(landmark["x"] * self.ScreenWidth)
+        # removed x = int(landmark["x"] * self.ScreenWidth)
+        # Mirror X coordinate for natural webcam feel  - claude 4.5 
+        x = int((1 - landmark["x"]) * self.ScreenWidth)
+        #---
+
+        
         y = int(landmark["y"] * self.ScreenHeight)
 
         # clamp

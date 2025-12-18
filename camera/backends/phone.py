@@ -4,8 +4,8 @@ import cv2
 class PhoneBackend:
     def __init__(self, config):
         Url = config.get("Url")
-        Width = config.get("Width", 1280)
-        Height = config.get("Height", 720)
+        Width = config.get("Width", 1920)
+        Height = config.get("Height", 1080)
 
         if Url is None:
             raise ValueError("Phone camera requires url")

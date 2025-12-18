@@ -4,7 +4,7 @@ from vision.landmarks import *
 def distance(a, b):
     return math.sqrt((a['x'] - b['x']) ** 2 + (a['y'] - b['y']) ** 2)
 
-def pinch(landmarks, threshold=.05):
+def pinch(landmarks, threshold=.07):
     thumb = landmarks[THUMB_TIP]
     index = landmarks[INDEX_TIP]
     return distance(thumb, index) < threshold
