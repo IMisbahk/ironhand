@@ -1,3 +1,4 @@
+import math
 import pyautogui
 import time
 
@@ -43,3 +44,5 @@ class CursorController:
         else:
             if self.isDragging:
                 self.stopDrag()
+
+

@@ -27,19 +27,14 @@ def grabbing(landmarks):
     return folded >= 3
 
 
+def calculateDistance(landmarks):
+    thumb = landmarks[THUMB_TIP]
+    index = landmarks[INDEX_TIP]
+    return math.sqrt((thumb["x"] - index["x"])**2 + (thumb["y"] - index["y"])**2)
 
-#gemini 
-def calculate_angle(a, b, width, height):
-    """
-    Calculates the angle of the line connecting a and b relative to the vertical axis.
-    """
-    dx = (b['x'] - a['x']) * width
-    dy = (b['y'] - a['y']) * height
-    
-    # atan2(dx, dy) gives 0 for (0, 1) i.e. vertical down, and 90 for (1, 0) i.e. horizontal right
-    angle_rad = math.atan2(dx, dy)
-    angle_deg = math.degrees(angle_rad)
-    
-    return abs(angle_deg)
-
-
+def calculateAngle(landmarks):
+    thumb = landmarks[THUMB_TIP]
+    index = landmarks[INDEX_TIP]
+    dx = index["x"] - thumb["x"]
+    dy = index["y"] - thumb["y"]
+    return math.degrees(math.atan2(dy, dx))
